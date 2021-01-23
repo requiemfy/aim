@@ -33,10 +33,7 @@ section {
 
 .caption {
   width: 1258px;
-  /* background: linear-gradient(-68deg, rgb(79, 197, 253), rgb(61, 55, 239) 77%); */
-  border: 1px solid #dedcdc;
 
-  background: rgb(215, 215, 215);
   border-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -45,7 +42,9 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0px 130px 17px 95px;
-  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.205), -3px -3px 7px rgba(255, 255, 255, 0.15); */
+
+  border: 1px solid #dedcdc;
+  background: rgb(215, 215, 215);
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
