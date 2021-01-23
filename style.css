@@ -63,8 +63,9 @@ section .title {
   font-family: 'Ubuntu', sans-serif;
 }
 
+/* @note about us */
 section .title::before {
-  content: "";
+  /* content: ""; */
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -213,15 +214,17 @@ section .title::after {
 
 .home {
   display: flex;
-  background: url("images/banner.png") no-repeat, rgb(215, 215, 215);
-  background-position: right;
+  
   height: 100vh;
   color: #fff;
   min-height: 500px;
+  font-family: 'Ubuntu', sans-serif;
+
   /* background-size: cover; */
+  background: url("images/banner.png") no-repeat, rgb(215, 215, 215);
+  background-position: right;
   background-size: 500px;
   background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
 }
 
 .home .max-width {
@@ -261,7 +264,7 @@ section .title::after {
 /* @note contact us home button */
 .home .home-content a { 
   display: inline-block;
-  color: #fff;
+  color: rgb(82, 82, 82);
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
@@ -285,8 +288,28 @@ section .title::after {
 }
 
 /* about section styling */
+.about {
+  background: url("images/banner.png") no-repeat, rgb(202, 202, 202);
+  background-position: right;
+  background-size: 400px;
+  background-attachment: fixed;
+
+}
+
+.about .title {
+  background: -webkit-linear-gradient(rgb(102, 117, 146), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .about .title::after {
-  content: "who i am";
+  content: "who we are";
+  border-radius: 5px;
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
+
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about .about-content .left {
@@ -311,11 +334,20 @@ section .title::after {
 }
 
 .about .about-content .right .text span {
-  color: crimson;
+  /* color: crimson; */
+  background: -webkit-linear-gradient(rgb(107, 106, 106), rgb(2, 5, 163));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.8), 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .about .about-content .right p {
   text-align: justify;
+
+  background: -webkit-linear-gradient(rgb(107, 106, 106), rgb(1, 2, 51));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.8), 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .about .about-content .right a {
