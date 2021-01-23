@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 /* custom scroll bar */
 
 ::-webkit-scrollbar {
@@ -226,6 +230,10 @@ section .title::after {
   background-attachment: fixed;
 }
 
+.home-content:hover ~ #particles-js {
+  pointer-events: none;
+}
+
 .home .max-width {
   margin: auto 0 auto 30px;
 }
@@ -291,6 +299,7 @@ section .title::after {
   background-position: right 100px top 80px;
   background-size: 600px;
   background-attachment: fixed;
+  pointer-events: none;
 }
 
 .about .title {
@@ -324,7 +333,8 @@ section .title::after {
 }
 
 /* @note scale up about us */
-@keyframes scaleup{
+
+@keyframes scaleup {
   0% {
     transform: scale(1.01);
   }
@@ -578,7 +588,7 @@ section .title::after {
   animation: teamsScaleup 3s ease-in-out infinite;
 }
 
-@keyframes teamsScaleup{
+@keyframes teamsScaleup {
   0% {
     transform: scale(1.05);
   }
@@ -589,7 +599,6 @@ section .title::after {
     transform: scale(1.05);
   }
 }
-
 
 .teams .carousel .card:hover::after {
   display: none;
@@ -654,8 +663,11 @@ section .title::after {
 
 /* contact section styling */
 
+
+
 .contact .title::after {
   content: "get in touch";
+  width: 150px;
 }
 
 .contact .contact-content .column {
