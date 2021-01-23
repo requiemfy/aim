@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Creative", "Minds"],
+        strings: ["Creative Minds", "Revolutionary Creatures"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Creative", "Minds"],
+        strings: ["Creative Minds", "Revolutionary Creatures"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
