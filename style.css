@@ -64,6 +64,7 @@ section .title {
 }
 
 /* @note about us */
+
 section .title::before {
   /* content: ""; */
   position: absolute;
@@ -98,6 +99,7 @@ section .title::after {
 }
 
 /* @note navbar */
+
 .navbar.sticky {
   padding: 10px 0;
   /* background: crimson; */
@@ -157,7 +159,6 @@ section .title::after {
   transition: color 0.3s ease;
   border: 1px solid #dedcdc;
   padding: 5px;
-
   border-radius: 5px;
   background: rgb(215, 215, 215);
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
@@ -214,12 +215,10 @@ section .title::after {
 
 .home {
   display: flex;
-  
   height: 100vh;
   color: #fff;
   min-height: 500px;
   font-family: 'Ubuntu', sans-serif;
-
   /* background-size: cover; */
   background: url("images/banner.png") no-repeat, rgb(215, 215, 215);
   background-position: right;
@@ -250,32 +249,30 @@ section .title::after {
 }
 
 /* typing */
+
 .home .home-content .text-3 span {
   /* color: rgb(36, 60, 124); */
   font-weight: 500;
-
   background: -webkit-linear-gradient(rgb(107, 106, 106), rgb(1, 2, 51));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.8), 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* @note contact us home button */
-.home .home-content a { 
+
+.home .home-content a {
   display: inline-block;
   color: rgb(82, 82, 82);
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
   font-weight: 400;
-
   /* background: rgba(182, 181, 181, 0.719); */
   background: rgb(215, 215, 215);
   border-radius: 6px;
   border: 2px solid rgb(207, 206, 206);
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
-
   transition: all 0.3s ease;
 }
 
@@ -288,12 +285,12 @@ section .title::after {
 }
 
 /* about section styling */
+
 .about {
   background: url("images/banner.png") no-repeat, rgb(202, 202, 202);
-  background-position: right;
-  background-size: 400px;
+  background-position: right 100px top 80px;
+  background-size: 600px;
   background-attachment: fixed;
-
 }
 
 .about .title {
@@ -306,7 +303,6 @@ section .title::after {
   content: "who we are";
   border-radius: 5px;
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
-
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -321,6 +317,23 @@ section .title::after {
   width: 400px;
   object-fit: cover;
   border-radius: 6px;
+  padding: 3px;
+  background: rgb(215, 215, 215);
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.541), 8px 8px 20px rgba(0, 0, 0, 0.397);
+  animation: scaleup 6s ease-in-out infinite;
+}
+
+/* @note scale up about us */
+@keyframes scaleup{
+  0% {
+    transform: scale(1.01);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.01);
+  }
 }
 
 .about .about-content .right {
@@ -343,7 +356,6 @@ section .title::after {
 
 .about .about-content .right p {
   text-align: justify;
-
   background: -webkit-linear-gradient(rgb(107, 106, 106), rgb(1, 2, 51));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -370,7 +382,9 @@ section .title::after {
 
 /* services section styling */
 
-.services, .teams {
+/* @note services and teams background */
+
+.services {
   color: #fff;
   background: #111;
 }
@@ -514,12 +528,33 @@ section .title::after {
 
 /* teams section styling */
 
+.teams {
+  color: #fff;
+  background: url("images/banner.png") no-repeat, rgb(202, 202, 202);
+  background-position: right;
+  background-size: 400px;
+  background-attachment: fixed;
+}
+
+.teams .title {
+  background: -webkit-linear-gradient(rgb(102, 117, 146), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .teams .title::after {
-  content: "who with me";
+  content: "league of legends";
+  border-radius: 5px;
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .teams .carousel .card {
-  background: #222;
+  /* background: #222; */
+  background: rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2); */
   border-radius: 6px;
   padding: 25px 35px;
   text-align: center;
@@ -527,8 +562,37 @@ section .title::after {
   transition: all 0.3s ease;
 }
 
+.teams .carousel .card::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  background: linear-gradient( to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 15%, transparent 50%, transparent 85%, rgba(255, 255, 255, 0.3) 100%);
+}
+
 .teams .carousel .card:hover {
-  background: crimson;
+  /* background: gray; */
+  background: rgba(215, 215, 215, 0.63);
+  animation: teamsScaleup 3s ease-in-out infinite;
+}
+
+@keyframes teamsScaleup{
+  0% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+
+.teams .carousel .card:hover::after {
+  display: none;
 }
 
 .teams .carousel .card .box {
@@ -554,12 +618,13 @@ section .title::after {
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid crimson;
+  border: 10px solid rgba(1, 14, 59, 0.24);
   transition: all 0.3s ease;
 }
 
 .teams .carousel .card:hover img {
-  border-color: #fff;
+  border-color: rgba(215, 215, 215);
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .owl-dots {
@@ -573,8 +638,9 @@ section .title::after {
   margin: 0 5px;
   outline: none!important;
   border-radius: 50%;
-  border: 2px solid crimson!important;
+  border: 2px solid rgba(2, 3, 53, 0.349)!important;
   transition: all 0.3s ease;
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .owl-dot.active {
@@ -583,7 +649,7 @@ section .title::after {
 }
 
 .owl-dot.active, .owl-dot:hover {
-  background: crimson!important;
+  background: rgba(3, 74, 228, 0.5)!important;
 }
 
 /* contact section styling */
