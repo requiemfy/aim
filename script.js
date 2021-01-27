@@ -13,7 +13,46 @@ $(document).ready(function () {
     } else {
       $('.scroll-up-btn').removeClass("show");
     }
+
+    if (this.scrollY > 1940) {
+      $('.navbar.sticky').addClass("deep");
+      $('.navbar .logo img').addClass("deep");
+      $('.navbar .menu li a').addClass("deep");
+      $('.scroll-up-btn').addClass("deep");
+
+    } else {
+      $('.navbar.sticky').removeClass("deep");
+      $('.navbar .logo img').removeClass("deep");
+      $('.navbar .menu li a').removeClass("deep");
+      $('.scroll-up-btn').removeClass("deep");
+    }
   });
+
+
+  window.addEventListener("resize", function() {
+    const baseRatio = 1366/637;
+    let currentRatio = window.innerWidth / window.innerHeight;
+
+    // if (baseRatio !== currentRatio) {
+    //   $('.events').css({
+    //     // "--l": "calc(100vh/(var(--n-rows) + 3))",
+    //     // "--l": "calc(100vw/var(--n-cols))",
+    //     // "height": "100vh",
+    //     // "height": "100vw",
+    //     "border": "3px solid green",
+    //   });
+
+    // } else {
+    //   $('.events').css({
+    //     "--l": "calc(200vh/(var(--n-rows) + 3))",
+    //     // "height": "175vh",
+    //     "border": "3px solid blue",
+    //   });
+    // }
+
+    console.log(currentRatio / baseRatio)
+  });
+
 
   // slide-up script
   $('.scroll-up-btn').click(function () {
