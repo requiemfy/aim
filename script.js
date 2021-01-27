@@ -1,4 +1,20 @@
 $(document).ready(function () {
+
+  function addEffect(_class) {
+    $('.navbar.sticky').addClass(_class);
+    $('.navbar .logo img').addClass(_class);
+    $('.navbar .menu li a').addClass(_class);
+    $('.scroll-up-btn').addClass(_class);
+  }
+
+  function removeEffect(_class) {
+    $('.navbar.sticky').removeClass(_class);
+    $('.navbar .logo img').removeClass(_class);
+    $('.navbar .menu li a').removeClass(_class);
+    $('.scroll-up-btn').removeClass(_class);
+  }
+
+
   $(window).scroll(function () {
     // sticky navbar on scroll script
     if (this.scrollY > 20) {
@@ -12,47 +28,29 @@ $(document).ready(function () {
       $('.scroll-up-btn').addClass("show");
     } else {
       $('.scroll-up-btn').removeClass("show");
+    } 
+    
+    if (this.scrollY > $('#latest').offset().top-100) {
+      addEffect("night")
+    } else {
+      removeEffect("night")
     }
 
-    if (this.scrollY > 1940) {
-      $('.navbar.sticky').addClass("deep");
-      $('.navbar .logo img').addClass("deep");
-      $('.navbar .menu li a').addClass("deep");
-      $('.scroll-up-btn').addClass("deep");
+    if (this.scrollY > $('.contact').offset().top-100) {
+      // $('.navbar.sticky').addClass("deep");
+      // $('.navbar .logo img').addClass("deep");
+      // $('.navbar .menu li a').addClass("deep");
+      // $('.scroll-up-btn').addClass("deep");
+      addEffect("deep")
 
     } else {
-      $('.navbar.sticky').removeClass("deep");
-      $('.navbar .logo img').removeClass("deep");
-      $('.navbar .menu li a').removeClass("deep");
-      $('.scroll-up-btn').removeClass("deep");
+      // $('.navbar.sticky').removeClass("deep");
+      // $('.navbar .logo img').removeClass("deep");
+      // $('.navbar .menu li a').removeClass("deep");
+      // $('.scroll-up-btn').removeClass("deep");
+      removeEffect("deep")
     }
   });
-
-
-  window.addEventListener("resize", function() {
-    const baseRatio = 1366/637;
-    let currentRatio = window.innerWidth / window.innerHeight;
-
-    // if (baseRatio !== currentRatio) {
-    //   $('.events').css({
-    //     // "--l": "calc(100vh/(var(--n-rows) + 3))",
-    //     // "--l": "calc(100vw/var(--n-cols))",
-    //     // "height": "100vh",
-    //     // "height": "100vw",
-    //     "border": "3px solid green",
-    //   });
-
-    // } else {
-    //   $('.events').css({
-    //     "--l": "calc(200vh/(var(--n-rows) + 3))",
-    //     // "height": "175vh",
-    //     "border": "3px solid blue",
-    //   });
-    // }
-
-    console.log(currentRatio / baseRatio)
-  });
-
 
   // slide-up script
   $('.scroll-up-btn').click(function () {
