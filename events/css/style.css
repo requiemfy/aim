@@ -1,18 +1,12 @@
-/*
-  Theme Name: TheEvent
-  Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 
 body {
   background: #fff;
-  color: #2f3138;
-  font-family: "Open Sans", sans-serif;
+  color: #38322f;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a {
@@ -145,22 +139,30 @@ h6 {
 --------------------------------------------------------------*/
 
 #header {
-  height: 90px;
-  padding: 25px 0;
+  /* height: 90px; */
+  /* padding: 25px; */
+  padding: 50px 0;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+
 }
 
 #header.header-scrolled,
 #header.header-fixed {
-  background: rgba(6, 12, 34, 0.98);
-  height: 70px;
-  padding: 15px 0;
+  /* background: rgba(6, 12, 34, 0.98); */
+  background: rgb(106, 115, 129);
+  padding: 21px 0;
+  /* height: 70px; */
+  /* padding: 15px 0; */
   transition: all 0.5s;
+}
+
+#header.header-scrolled #logo img {
+  background: rgb(106, 115, 129);;
 }
 
 #header #logo h1 {
@@ -183,10 +185,33 @@ h6 {
   color: #fff;
 }
 
+
+#header #logo {
+  margin-top: -35px;
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+}
+
+
+#header #logo .aim {
+  font-size: 72px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.055), 2px 2px 10px rgba(0, 0, 0, 0.849); */
+}
+
 #header #logo img {
-  padding: 0;
+  /* padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 40px; */
+  width: 50px;
+  border-radius: 50px;
+  background: rgba(24, 26, 34, 0.8);
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.267), 8px 8px 20px rgba(0, 0, 0, 0.808);
 }
 
 /*--------------------------------------------------------------
@@ -270,28 +295,35 @@ h6 {
   font-weight: 600;
   font-size: 14px;
   outline: none;
+
+  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.288), 2px 2px 10px rgba(0, 0, 0, 0.932);
+
 }
 
 .nav-menu .menu-active a,
 .nav-menu a:hover {
   color: #fff;
+  border-radius: 5px;
+  background: transparent;
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.24), 8px 8px 20px rgba(0, 0, 0, 0.952)
 }
 
 .nav-menu > li {
   margin-left: 8px;
 }
 
-.nav-menu > li > a:before {
+/* hover menu */
+/* .nav-menu > li > a:before {
   content: "";
   position: absolute;
   width: 0;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #f82249;
+  background-color: #f5edee;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
-}
+} */
 
 .nav-menu a:hover:before,
 .nav-menu li:hover > a:before,
@@ -469,15 +501,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh;
-  background: url(../img/intro-bg.jpg) top center;
+
+  background: url("../img/intro-bg.jpg") top center;
   background-size: cover;
+  /* background: url("../img/banner.png") no-repeat, url("../img/intro-bg.jpg") top center; */
+
+ 
+
   overflow: hidden;
   position: relative;
 }
 
 #intro:before {
   content: "";
-  background: rgba(6, 12, 34, 0.8);
+  /* background: rgba(24, 26, 34, 0.8); */
+
+ background: url("../img/banner.png") no-repeat,rgba(24, 26, 34, 0.8);
+  background-position: left bottom -50px;
+  background-size: 600px;
+  background-attachment: fixed;
+
   position: absolute;
   bottom: 0;
   top: 0;

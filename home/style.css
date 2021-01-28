@@ -120,7 +120,7 @@ section .title::after {
 /* @note navbar */
 
 .navbar.sticky {
-  padding: 10px 0;
+  padding: 0;
   /* background: crimson; */
   background: rgb(199, 199, 199);
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
