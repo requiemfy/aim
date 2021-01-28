@@ -250,11 +250,13 @@ section .title::after {
   transition: all 0.3s ease;
   box-shadow: -8px -8px 20px 0 rgb(255, 255, 255), 8px 8px 20px rgba(0, 0, 0, 0.829);
 }
-
-.scroll-up-btn.deep {
-  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.26), 8px 8px 20px rgb(0, 0, 0);
+.scroll-up-btn.night {
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.445), 8px 8px 20px rgba(0, 0, 0, 0.829);
 }
 
+.scroll-up-btn.deep {
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.212), 8px 8px 20px rgb(0, 0, 0);
+}
 .scroll-up-btn.show {
   bottom: 30px;
   opacity: 1;
@@ -502,39 +504,33 @@ section .title::after {
   background-size: 800px;
   background-attachment: fixed;
   pointer-events: none;
-  padding-top: 110px;
+  padding-top: 100px;
 }
-
 .events-container .title {
   margin-bottom: 0;
   background: -webkit-linear-gradient(rgb(178, 191, 218), #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .events-container .title::after {
-  content: "also activities";
+  content: "what's up?";
   border-radius: 5px;
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.281), 8px 8px 20px rgba(0, 0, 0, 0.2);
   background: -webkit-linear-gradient(rgba(238, 238, 238, 0.918), rgba(51, 51, 51, 0.603));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .events-container .events-container-content .column {
   width: calc(50% - 30px);
 }
-
 .events-container .events-container-content .left .text {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-
 .events-container .events-container-content .left p {
   text-align: justify;
 }
-
 .events-container .events-container-content .left a {
   display: inline-block;
   background: crimson;
@@ -547,35 +543,29 @@ section .title::after {
   border: 2px solid crimson;
   transition: all 0.3s ease;
 }
-
 .events-container .events-container-content .left a:hover {
   color: crimson;
   background: none;
 }
-
 .events-container .events-container-content .right .bars {
   margin-bottom: 15px;
 }
-
 .events-container .events-container-content .right .info {
   display: flex;
   margin-bottom: 5px;
   align-items: center;
   justify-content: space-between;
 }
-
 .events-container .events-container-content .right span {
   font-weight: 500;
   font-size: 18px;
 }
-
 .events-container .events-container-content .right .line {
   height: 5px;
   width: 100%;
   background: lightgrey;
   position: relative;
 }
-
 .events-container .events-container-content .right .line::before {
   content: "";
   position: absolute;
@@ -584,27 +574,22 @@ section .title::after {
   top: 0;
   background: crimson;
 }
-
 .events-container-content .right .html::before {
   width: 90%;
 }
-
 .events-container-content .right .css::before {
   width: 60%;
 }
-
 .events-container-content .right .js::before {
   width: 80%;
 }
-
 .events-container-content .right .php::before {
   width: 50%;
 }
-
 .events-container-content .right .mysql::before {
   width: 70%;
 }
-
+/* ~~~~~~~~~~~~~ */
 .events {
   --l: calc(100vw/var(--n-cols));
   --hl: calc(.5*var(--l));
@@ -623,7 +608,6 @@ section .title::after {
   filter: drop-shadow(8px 8px 20px rgba(0, 0, 0, 0.849)) drop-shadow(-8px -8px 20px rgba(255, 255, 255, 0.226));
   margin-top: -8%;
 }
-
 .hex-cell {
   overflow: hidden;
   grid-column-end: span 2;
@@ -632,7 +616,6 @@ section .title::after {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   pointer-events: auto;
 }
-
 .event {
   --hl: 0;
   width: 100%;
@@ -642,7 +625,6 @@ section .title::after {
   filter: brightness(calc(.6*(1 + var(--hl))));
   transition: .7s;
 }
-
 .event:hover {
   --hl: 1;
 }
@@ -775,10 +757,9 @@ section .title::after {
 /* contact section styling */
 
 .contact {
-  /* background: rgba(1, 1, 37, 0.808); */
-  /* background: -webkit-linear-gradient(rgb(145, 145, 148), rgb(13, 13, 20)); */
   box-shadow: -8px -8px 20px 0 rgba(0, 0, 0, 0.2), 8px 8px 20px rgba(0, 0, 0, 0.2);
 
+  /* background: -webkit-linear-gradient(rgb(145, 145, 148), rgb(13, 13, 20)); */
   background: url("images/banner.png") no-repeat,-webkit-linear-gradient(rgb(145, 145, 148), rgb(13, 13, 20));
   background-position: left -50px bottom -40px;
   background-size: 600px;

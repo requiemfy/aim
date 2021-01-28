@@ -12,7 +12,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <link href="./aos.css" rel="stylesheet">
 </head>
 
 <style>
@@ -35,10 +36,11 @@
         <li><a href="#home" class="menu-btn">Home</a></li>
         <li><a href="#about" class="menu-btn">About</a></li>
         <li><a href="#teams" class="menu-btn">Members</a></li>
-        <li><a href="#latest" class="menu-btn">Latest</a></li>
+        <li><a href="#updates" class="menu-btn">Updates</a></li>
+        <li><a href="#contact" class="menu-btn contact-menu">Contact</a></li>
+        <li><a href="../events/index.html" class="menu-btn">events</a></li>
         <!-- <li><a href="#services" class="menu-btn">Services</a></li> -->
         <!-- <li><a href="#skills" class="menu-btn">Skills</a></li> -->
-        <li><a href="#contact" class="menu-btn contact-menu">Contact</a></li>
       </ul>
       <div class="menu-btn">
         <i class="fas fa-bars"></i>
@@ -161,9 +163,9 @@
   </section> -->
 
   <!-- skills section start -->
-  <section class="events-container" id="latest">
+  <section class="events-container" id="updates">
     <div class="max-width">
-      <h2 class="title" data-aos="fade-right">Our Events</h2>
+      <h2 class="title" data-aos="fade-right">Our Updates</h2>
       <div class="events" style="--n-rows: 3; --n-cols: 6" data-aos="flip-left">
         <style>
           .hex-cell:nth-of-type(5n + 1) {
@@ -176,8 +178,7 @@
             src="https://images.unsplash.com/photo-1497733942558-e74c87ef89db?w=650&amp;fm=jpg" /></div>
         <div class="hex-cell"><img class="event"
             src="https://images.unsplash.com/photo-1540744276164-9dc898353c7b?w=650&amp;fm=jpg" /></div>
-        <div class="hex-cell"><img class="event"
-            src="https://images.unsplash.com/photo-1469975692758-66d107a536cb?w=650&amp;fm=jpg" /></div>
+        <div class="hex-cell"><a href="../events/index.html"><img class="event" src="./images/ictweek.png" /></a></div>
         <div class="hex-cell"><img class="event"
             src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&amp;fm=jpg" /></div>
         <div class="hex-cell"><img class="event"
@@ -261,7 +262,8 @@
   <script src="script.js"></script>
 
   <!-- AOS script -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+  <script src="./aos.js"></script>
   <script>
     AOS.init({
       offset: 200,

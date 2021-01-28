@@ -30,24 +30,16 @@ $(document).ready(function () {
       $('.scroll-up-btn').removeClass("show");
     } 
     
-    if (this.scrollY > $('#latest').offset().top-100) {
+    if (this.scrollY > $('#updates').offset().top-100) {
       addEffect("night")
     } else {
       removeEffect("night")
     }
 
     if (this.scrollY > $('.contact').offset().top-100) {
-      // $('.navbar.sticky').addClass("deep");
-      // $('.navbar .logo img').addClass("deep");
-      // $('.navbar .menu li a').addClass("deep");
-      // $('.scroll-up-btn').addClass("deep");
       addEffect("deep")
 
     } else {
-      // $('.navbar.sticky').removeClass("deep");
-      // $('.navbar .logo img').removeClass("deep");
-      // $('.navbar .menu li a').removeClass("deep");
-      // $('.scroll-up-btn').removeClass("deep");
       removeEffect("deep")
     }
   });
