@@ -24,28 +24,29 @@
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="./lib/aos/aos.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="./css/glitching.css" rel="stylesheet">
 </head>
 
 <body>
-
   <!--==========================
     Header
   ============================-->
   <header id="header">
     <div class="container">
 
-      <div id="logo" class="pull-left">
+      <div id="logo" data-aos="fade">
         <img class="lvcc-logo" src="./img/lvcc-logo.png" data-aos="zoom-out" alt="LVCC">
         <a href="../home/index.html" class="aim">AIM</a>
       </div>
 
-      <nav id="nav-menu-container">
+      <nav id="nav-menu-container" data-aos="fade-right">
         <ul class="nav-menu">
-          <li><a href="#Home">Home</a></li>
-          <li class="menu-active"><a href="#intro">Introduction</a></li>
+          <li><a href="file:///home/mingming/Documents/aim/home/index.html">Home</a></li>
+          <li class="menu-active"><a href="#intro">Event</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Schedule</a></li>
@@ -53,7 +54,7 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#supporters">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
+          <li class="buy-tickets"><a href="#buy-tickets">Buy Merch</a></li>
         </ul>
       </nav>>
     </div>
@@ -65,9 +66,15 @@
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
-      <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1>
-      <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p>
-      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+      <h1 class="mb-4 pb-0 glitch" data-text="ICT WEEK 2021">
+        ICT WEEK 2021
+      </h1>
+      <p class="mb-4 pb-0" style="
+        color: #64dcdc; 
+        letter-spacing: 10px;
+        text-shadow: -5px -5px 15px rgba(255, 255, 255, 0.527), 5px 5px 15px rgb(0, 0, 0);
+      ">February 1 - 5 | via Zoom</p>
+      <a href="https://www.youtube.com/watch?v=OdhaRTwcjs8" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a>
       <a href="#about" class="about-btn scrollto">About The Event</a>
     </div>
@@ -102,7 +109,7 @@
     <!--==========================
       Speakers Section
     ============================-->
-    <section id="speakers" class="wow fadeInUp">
+    <section id="speakers" class="wow">
       <div class="container">
         <div class="section-header">
           <h2>Event Speakers</h2>
@@ -861,7 +868,7 @@
       <div class="container">
 
         <div class="section-header">
-          <h2>Buy Tickets</h2>
+          <h2>Buy Merchandise</h2>
           <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
         </div>
 
@@ -1127,6 +1134,7 @@
       </div>
     </div>
   </footer><!-- #footer -->
+  <div id="particles-js"></div>
 
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
@@ -1146,6 +1154,20 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+  <!-- AOS -->
+  <script src="./lib/aos/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1000
+    });
+  </script>
+
+  <!-- particles -->
+  <script src="./lib/particles/particles.js"></script>
+  <script src="./lib/particles/app.js"></script>
 </body>
 
 </html>

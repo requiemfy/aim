@@ -7,7 +7,13 @@ jQuery(document).ready(function( $ ) {
     } else {
       $('.back-to-top').fadeOut('slow');
     }
+
+    if (this.scrollY > $('#speakers').offset().top - 70) {
+      alert("GGWP") // @note here
+    } else {
+    }
   });
+
   $('.back-to-top').click(function(){
     $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
     return false;
@@ -106,7 +112,8 @@ jQuery(document).ready(function( $ ) {
         }
 
         $('html, body').animate({
-          scrollTop: target.offset().top - top_space
+          // scrollTop: target.offset().top - top_space
+          scrollTop: target.offset().top - 50
         }, 1500, 'easeInOutExpo');
 
         if ($(this).parents('.nav-menu').length) {
@@ -143,5 +150,6 @@ jQuery(document).ready(function( $ ) {
   })
 
 // custom code
+
 
 });

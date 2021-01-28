@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  $('.venobox').venobox({
+    framewidth : '80%',                           
+    // frameheight: '600px',
+    bgcolor: '',
+    overlayColor: 'rgba(6, 12, 34, 0.85)',
+    closeBackground: '',
+    closeColor: '#fff',
+    // spinner: 'wave',
+    share: ['facebook', 'twitter', 'download']
+  });
 
   function addEffect(_class) {
     $('.navbar.sticky').addClass(_class);
