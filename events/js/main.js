@@ -9,7 +9,7 @@ jQuery(document).ready(function( $ ) {
     }
 
     if (this.scrollY > $('#speakers').offset().top - 70) {
-      alert("GGWP") // @note here
+      // @remind 
     } else {
     }
   });
