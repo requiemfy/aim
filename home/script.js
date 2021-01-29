@@ -81,14 +81,14 @@ $(document).ready(function () {
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["OUR MISSION", "MISSION, not impossible"],
+    strings: ["our mission", "OUR MISSION!!"],
     typeSpeed: 100,
     backSpeed: 100,
     loop: true
   });
 
   var typed = new Typed(".typing-3", {
-    strings: ["OUR VISION", "gank without VISION"],
+    strings: ["our vision", "OUR VISION!!"],
     typeSpeed: 100,
     backSpeed: 100,
     loop: true

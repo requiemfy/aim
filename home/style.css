@@ -126,11 +126,11 @@ section .title::after {
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
 }
 /* ~~~~~~~~~~~~~ */
-.navbar.sticky.night, .navbar .logo img.night, .navbar .menu li a.night {
+.navbar.sticky.night, .navbar .logo .lvcc-logo.night, .navbar .menu li a.night {
   background: rgb(151, 155, 161);
   transition: 1000ms;
 }
-.navbar .logo img.night, .navbar .menu li a.night {
+.navbar .logo .lvcc-logo.night, .navbar .menu li a.night {
   box-shadow: -8px -8px 20px 0 rgba(204, 206, 216, 0.562), 8px 8px 20px rgba(0, 0, 0, 0.589);
 }
 .navbar .menu li a.night {
@@ -138,7 +138,7 @@ section .title::after {
   border: 1px solid transparent
 }
 /* ~~~~~~~~~~~~~ */
-.navbar.sticky.deep, .navbar .logo img.deep, .navbar .menu li a.deep {
+.navbar.sticky.deep, .navbar .logo .lvcc-logo.deep, .navbar .menu li a.deep {
   background: rgb(106, 115, 129);
   /* background: -webkit-linear-gradient(rgb(13, 13, 20), rgb(145, 145, 148)); */
   transition: 1000ms;
@@ -146,7 +146,7 @@ section .title::after {
 .navbar.sticky.deep {
   box-shadow: none;
 }
-.navbar .logo img.deep, .navbar .menu li a.deep {
+.navbar .logo .lvcc-logo.deep, .navbar .menu li a.deep {
   box-shadow: -8px -8px 20px 0 rgba(204, 206, 216, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.589);
 }
 .navbar .menu li a.deep {
@@ -173,7 +173,7 @@ section .title::after {
   -webkit-text-fill-color: transparent;
 }
 
-.navbar .logo img {
+.navbar .logo .lvcc-logo {
   /* border: 1px solid #ddd; */
   /* border-radius: 4px; */
   /* padding: 5px; */
@@ -181,6 +181,15 @@ section .title::after {
   border-radius: 50px;
   background: rgb(215, 215, 215);
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.521);
+
+  /* box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.527), 8px 8px 20px rgba(0, 0, 0, 0.185); */
+  /* -webkit-filter:drop-shadow(0 0 5px rgba(0, 0, 0, 0.445)); */
+}
+
+.navbar .logo .aim-logo {
+  width: 70px;
+  position: absolute;
+  bottom: 6px;
 }
 
 .navbar .logo a span {
@@ -206,10 +215,10 @@ section .title::after {
   font-weight: 500;
   margin-left: 25px;
   transition: color 0.3s ease;
-  border: 1px solid #dedcdc;
+  border: 1px solid transparent;
   padding: 5px;
   border-radius: 5px;
-  background: rgb(215, 215, 215);
+  /* background: rgb(215, 215, 215); */
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.267);
 }
 
