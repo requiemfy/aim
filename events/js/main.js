@@ -10,11 +10,6 @@ jQuery(document).ready(function( $ ) {
     } else {
       $('.back-to-top').fadeOut('slow');
     }
-
-    if (this.scrollY > $('#speakers').offset().top - 70) {
-      // @remind 
-    } else {
-    }
   });
 
   $('.back-to-top').click(function(){
@@ -26,8 +21,10 @@ jQuery(document).ready(function( $ ) {
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
+      $('#particles-js').addClass('opacity-1');
     } else {
       $('#header').removeClass('header-scrolled');
+      $('#particles-js').removeClass('opacity-1');
     }
   });
 
