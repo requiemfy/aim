@@ -1,7 +1,4 @@
 jQuery(document).ready(function( $ ) {
-  $(window).on('unload', function() {
-      $(window).scrollTop(0);
-  });
 
   // Back to top button
   $(window).scroll(function() {
@@ -10,13 +7,7 @@ jQuery(document).ready(function( $ ) {
     } else {
       $('.back-to-top').fadeOut('slow');
     }
-
-    if (this.scrollY > $('#speakers').offset().top - 70) {
-      // @remind 
-    } else {
-    }
   });
-
   $('.back-to-top').click(function(){
     $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
     return false;
@@ -42,15 +33,13 @@ jQuery(document).ready(function( $ ) {
 
   // Initiate the wowjs animation library
   new WOW().init();
-  
+
   // Initialize Venobox
   $('.venobox').venobox({
     bgcolor: '',
     overlayColor: 'rgba(6, 12, 34, 0.85)',
     closeBackground: '',
-    closeColor: '#fff',
-    infinigall: true,
-    numeratio: true,
+    closeColor: '#fff'
   });
 
   // Initiate superfish on nav menu
@@ -118,7 +107,6 @@ jQuery(document).ready(function( $ ) {
 
         $('html, body').animate({
           scrollTop: target.offset().top - top_space
-          // scrollTop: target.offset().top - 50
         }, 1500, 'easeInOutExpo');
 
         if ($(this).parents('.nav-menu').length) {
@@ -138,7 +126,7 @@ jQuery(document).ready(function( $ ) {
 
   // Gallery carousel (uses the Owl Carousel library)
   $(".gallery-carousel").owlCarousel({
-    autoplay: false,
+    autoplay: true,
     dots: true,
     loop: true,
     center:true,
@@ -155,6 +143,5 @@ jQuery(document).ready(function( $ ) {
   })
 
 // custom code
-
 
 });
