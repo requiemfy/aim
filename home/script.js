@@ -1,6 +1,13 @@
 $(document).ready(function () {
+  // location.href = "#home"
+  $(window).on('beforeunload', function() {
+    $('body').hide();
+    $(window).scrollTop(0);
+  });
+
+
   $('.venobox').venobox({
-    framewidth : '80%',                           
+    framewidth: '80%',
     // frameheight: '600px',
     bgcolor: '',
     overlayColor: 'rgba(6, 12, 34, 0.85)',
@@ -38,15 +45,15 @@ $(document).ready(function () {
       $('.scroll-up-btn').addClass("show");
     } else {
       $('.scroll-up-btn').removeClass("show");
-    } 
-    
-    if (this.scrollY > $('#updates').offset().top-100) {
+    }
+
+    if (this.scrollY > $('#updates').offset().top - 100) {
       addEffect("night")
     } else {
       removeEffect("night")
     }
 
-    if (this.scrollY > $('.contact').offset().top-100) {
+    if (this.scrollY > $('.contact').offset().top - 100) {
       addEffect("deep")
 
     } else {

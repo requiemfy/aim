@@ -768,6 +768,7 @@ section .title::after {
 }
 
 .teams .carousel .card {
+  height: 325px;
   /* background: #222; */
   background: rgba(255, 255, 255, 0.1);
   /* box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2); */
@@ -1068,7 +1069,7 @@ footer span a:hover {
     width: 100%;
     left: -100%;
     top: 0;
-    background: rgba(187, 187, 187, 0.61);
+    background: rgba(189, 188, 188, 0.911);
     text-align: center;
     padding-top: 80px;
     transition: all 0.3s ease;
