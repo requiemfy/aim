@@ -373,6 +373,7 @@ section .title::after {
 /* about section styling */
 
 .about {
+  padding-bottom: 0;
   background: url("images/banner.png") no-repeat, rgb(202, 202, 202);
   background-position: right 100px top 80px;
   background-size: 600px;
@@ -426,8 +427,44 @@ section .title::after {
 }
 
 .about .about-content .right {
+  color: rgba(0, 0, 0, 0.596);
   width: 55%;
+  margin-top: -60px;
+  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.897), 2px 2px 10px rgba(0, 0, 0, 0.692);
+  text-align: center;
 }
+
+.about .mission-vision {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .mission-vision span{
+  padding: 0px 5px;
+  font-size: 20px;
+  font-weight: 450;
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 5px;
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
+  background: -webkit-linear-gradient(rgba(238, 238, 238, 0.918), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.about .mission-vision p{
+  color: rgba(0, 0, 0, 0.596);
+  width: 500px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.897), 2px 2px 10px rgba(0, 0, 0, 0.692);
+}
+.about .mission-vision .vision{
+  margin-top: 50px;
+}
+
+/* @note no need i guess */
 
 .about .about-content .right .text {
   font-size: 25px;
@@ -468,18 +505,20 @@ section .title::after {
   color: crimson;
   background: none;
 }
+/* @note no need i guess */
+
 
 /* services section styling */
 
 /* @note services and teams background */
 
 .services {
+  padding-top: 50px;
   color: rgba(70, 68, 68, 0.897);
   background: url("images/banner.png") no-repeat, rgb(202, 202, 202);
   background-position: center top 70px;
   background-size: 650px;
   background-attachment: fixed;
-  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.842), 2px 2px 10px rgba(0, 0, 0, 0.541);
 }
 
 .services .title {
@@ -495,27 +534,28 @@ section .title::after {
 .services .title::after, .teams .title::after {
   /* background: #111;
   content: "what i provide"; */
-  content: "what i provide";
+  content: "Our Objectives";
   border-radius: 5px;
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
-  background: -webkit-linear-gradient(#eee, #333);
+  background: -webkit-linear-gradient(rgba(238, 238, 238, 0.089), #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .services .serv-content .card {
   width: calc(33% - 20px);
-  /* background: #222; */
   text-align: center;
   border-radius: 6px;
   padding: 20px 25px;
   cursor: pointer;
   transition: all 800ms ease;
   margin: 10px;
+  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.842), 2px 2px 10px rgba(0, 0, 0, 0.541);
+  height: 225px;
 }
 
 .services .serv-content .card:hover {
-  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.733), 8px 8px 20px rgba(0, 0, 0, 0.37);
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.856), 8px 8px 20px rgba(0, 0, 0, 0.699);
 }
 
 .services .serv-content .card .box {
