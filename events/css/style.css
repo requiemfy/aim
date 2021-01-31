@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 #particles-js.opacity-1 {
   opacity: 1;
   z-index: 1;
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 /* Back to top button */
@@ -912,8 +912,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   padding: 10px 100px;
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.288), 8px 8px 20px rgba(0, 0, 0, 0.411);
-  
-  z-index: 100;
 }
 
 #schedule .nav-tabs a.active {
