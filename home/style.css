@@ -567,7 +567,7 @@ section .title::after {
 
 .events-container .title {
   margin-bottom: 0;
-  background: -webkit-linear-gradient(rgb(178, 191, 218), #333);
+  background: -webkit-linear-gradient(rgb(197, 209, 235), rgb(131, 130, 130));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -681,7 +681,7 @@ section .title::after {
   padding: var(--hl) 0;
   height: 100vw;
   filter: drop-shadow(8px 8px 20px rgba(0, 0, 0, 0.849)) drop-shadow(-8px -8px 20px rgba(255, 255, 255, 0.226));
-  margin-top: -8%;
+  /* margin-top: -8%; */
 }
 
 .hex-cell {
@@ -699,11 +699,12 @@ section .title::after {
   height: 100%;
   object-fit: cover;
   transform: scale(calc(1 + .2*var(--hl)));
-  filter: brightness(calc(.6*(1 + var(--hl))));
+  /* filter: brightness(calc(.6*(1 + var(--hl)))); */
   transition: .7s;
 }
 
 .event:hover {
+  filter: brightness(1.1);
   --hl: 1;
 }
 
