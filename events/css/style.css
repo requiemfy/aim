@@ -1592,6 +1592,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
+@media (max-width: 1000px) {
+  #intro::before {
+    background-position: left bottom -350px;
+  }
+}
+
+
 
 @media (min-width: 767px) {
   #subscribe input {
