@@ -402,7 +402,7 @@ footer span a:hover {
 }
 
 .gallery-container .content p:hover {
-  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.63), 8px 8px 20px rgba(0, 0, 0, 0.397);
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.63), 8px 8px 20px rgba(0, 0, 0, 0.616);
 }
 
 @keyframes flatten {
