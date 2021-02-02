@@ -5,6 +5,7 @@ class Example {
     this.init();
 
     setTimeout(this.showImages.bind(this), 1000);
+
   }
 
   init() {
@@ -14,10 +15,13 @@ class Example {
       smooth: true,
       lerp: 0.05,
       tablet: {
-        smooth: true },
+        smooth: true
+      },
 
       smartphone: {
-        smooth: true } });
+        smooth: true
+      }
+    });
 
 
 
@@ -44,12 +48,18 @@ class Example {
     });
 
     setTimeout(this.showImages.bind(this), 2000);
-  }}
+  }
+
+  // responseDim() {
+  //   if (innerWidth > 550)
+  // }
+}
 
 
 
 window.addEventListener('DOMContentLoaded', event => {
   const example = new Example({
-    root: document.querySelector('.scroll-animations-example') });
+    root: document.querySelector('.scroll-animations-example')
+  });
 
 });

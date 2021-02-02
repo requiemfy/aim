@@ -4,7 +4,7 @@ body {
   background: #eee;
 }
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .scroll-animations-example > .scrollsection {
   padding: 10vh 10vh 10vh 10vmax;
@@ -109,6 +109,21 @@ body {
   opacity: 1;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .fake-ui {
   font-size: 0;
 }
@@ -142,6 +157,22 @@ body {
   background: #999;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 [data-scroll-direction=horizontal] .c-scrollbar {
   height: 30px;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-section] {
+  height: 300px;
 }

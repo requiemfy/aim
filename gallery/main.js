@@ -1,5 +1,8 @@
 $(document).ready(function () {
   // location.href = "#home"
+ 
+
+
   $(window).on('beforeunload', function () {
     $('body').hide();
     $(window).scrollTop(0);
@@ -112,14 +115,19 @@ $(document).ready(function () {
     // });
   });
 
+  // select all child <a>
+
+  
+
+
+
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ gallery end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ lightbox start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	$(function(){
-		$('[data-rel="lightbox"]').lightbox();
+    $('[data-rel="lightbox"]').lightbox();
 	});
-
-
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ lightbox end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 });

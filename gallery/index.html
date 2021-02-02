@@ -17,7 +17,6 @@
   <link href="./style.css" rel="stylesheet">
 
   <link href="./lib/responsive-lightbox/jquery.lightbox.css" rel="stylesheet">
-  <link href="./css/lightbox-custom.css" rel="stylesheet">
 
 
   <!-- ******************* js libs ******************* -->
@@ -27,11 +26,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
   <!-- <link href="./lib/lightbox/lightbox.css" rel="stylesheet"> -->
 </head>
 
 <body>
+
+  <div class="loader-container">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+
   <div id="particles-js"></div>
 
   <div class="scroll-up-btn">
@@ -435,67 +439,544 @@
 
 
 
-  <div class="gallery" id="gallery">
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,care" data-rel="lightbox" title="my caption">
-      <div class="content">
-        <img src="https://source.unsplash.com/random/?tech,care" alt="">
+  <section id="gallery-container" class="gallery-container">
+
+    <div class="max-width">
+
+      <h2 class="title" data-aos="fade-up">Our Gallery</h2>
+      <div class="content" data-aos="slide-up">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt saepe fugit doloribus, voluptas similique qui quos nobis repudiandae quibusdam, vero aliquam perspiciatis facere aut sapiente! Quia adipisci expedita exercitationem nemo.
+        </p>
       </div>
-    </a>
 
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox" title="my caption">
-      <div class="content">
-        <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+      <!-- <div class="gallery" id="gallery">
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,care" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,care" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox"
+          title="my caption" data-aos="fade-up">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox"
+          title="my caption" data-aos="fade-down">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox"
+          title="my caption" data-aos="fade-up-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox"
+          title="my caption" data-aos="fade-up-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox"
+          title="my caption" data-aos="fade-down-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox"
+          title="my caption" data-aos="fade-down-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </a>
+
+
+
+
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox"
+          title="my caption" data-aos="fade-up">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox"
+          title="my caption" data-aos="fade-down">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox"
+          title="my caption" data-aos="fade-up-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox"
+          title="my caption" data-aos="fade-up-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox"
+          title="my caption" data-aos="fade-down-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox"
+          title="my caption" data-aos="fade-down-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </a>
+
+
+
+
+
+
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,eight" data-rel="lightbox"
+          title="my caption" data-aos="flip-up">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,eight" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,crew" data-rel="lightbox"
+          title="my caption" data-aos="flip-down">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,crew" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,event" data-rel="lightbox"
+          title="my caption" data-aos="flip-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,event" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,instrument" data-rel="lightbox"
+          title="my caption" data-aos="flip-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,instrument" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,practical" data-rel="lightbox"
+          title="my caption" data-aos="slide-up">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,practical" alt=""></div>
+        </a>
+
+
+        
+
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox"
+          title="my caption" data-aos="fade-up">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox"
+          title="my caption" data-aos="fade-down">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox"
+          title="my caption" data-aos="fade-up-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox"
+          title="my caption" data-aos="fade-up-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox"
+          title="my caption" data-aos="fade-down-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox"
+          title="my caption" data-aos="fade-down-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </a>
+
+      </div> -->
+
+      <!-- <div class="gallery" id="gallery">
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,care" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,care" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </a>
+
+
+
+
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </a>
+
+
+
+
+
+
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,eight" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,eight" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,crew" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,crew" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,event" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,event" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,instrument" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,instrument" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,practical" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,practical" alt=""></div>
+        </a>
+
+
+        
+
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox"
+          title="my caption" data-aos="fade">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </a>
+
+      </div> -->
+
+      <div class="gallery" id="gallery">
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,care" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,care" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </a>
+
+
+
+
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </a>
+
+
+
+
+
+
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,eight" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,eight" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,crew" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,crew" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,event" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,event" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,instrument" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,instrument" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,practical" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,practical" alt=""></div>
+        </a>
+
+
+
+
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content">
+            <img src="https://source.unsplash.com/random/?tech,studied" alt="">
+          </div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox"
+          title="my caption" data-aos="fade-left">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </a>
+
+        <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox"
+          title="my caption" data-aos="fade-right">
+          <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </a>
+
       </div>
-    </a>
 
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,pass" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
-    </a>
-    
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,bigger" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,number" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,choose" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,past" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,lamp" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,yet" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,eight" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,eight" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,crew" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,crew" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,event" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,event" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,instrument" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,instrument" alt=""></div>
-    </a>
-
-    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,practical" data-rel="lightbox" title="my caption">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,practical" alt=""></div>
-    </a>
-  </div>
+    </div>
+  </section>
 
 
 
@@ -520,7 +1001,7 @@
   <script>
     AOS.init({
       offset: 200,
-      delay: 100,
+      delay: 80,
       duration: 1000
     });
   </script>
@@ -540,6 +1021,18 @@
   <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
   <!-- <script src="./lib/responsive-lightbox/jquery.lightbox.min.js"></script> -->
   <script src="./lib/responsive-lightbox/3/jquery.lightbox.js"></script>
+
+  <!-- loader -->
+  <script>
+
+    $(window).on("load", function () {
+      $('.loader-container').fadeOut("slow");
+      $('html').css({
+        "overflow-y": 'scroll',
+      });
+
+    })
+  </script>
 </body>
 
 </html>

@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-y: hidden;
 }
 
 html, body {
@@ -19,7 +20,6 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-
   background: url("images/banner.png") no-repeat, rgb(215, 215, 215);
   background-position: right;
   background-size: 500px;
@@ -34,8 +34,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-
   pointer-events: none;
+  z-index: 99999;
 }
 
 /* custom scroll bar */
@@ -68,7 +68,7 @@ section {
   margin: auto;
 }
 
-.about, .services, .events-container, .teams, .contact, footer {
+.about, .services, .events-container, .teams, .contact, footer, .gallery-container {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -186,7 +186,6 @@ section .title::after {
 }
 
 .navbar .logo .lvcc-logo {
-
   padding: 1px;
   width: 70px;
   border-radius: 70px;
@@ -422,7 +421,8 @@ section .title::after {
   flex-direction: column;
   align-items: center;
 }
-.about .mission-vision span{
+
+.about .mission-vision span {
   padding: 0px 5px;
   font-size: 20px;
   font-weight: 450;
@@ -432,9 +432,9 @@ section .title::after {
   background: -webkit-linear-gradient(rgba(238, 238, 238, 0.918), #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
-.about .mission-vision p{
+
+.about .mission-vision p {
   color: rgba(0, 0, 0, 0.596);
   width: 500px;
   text-align: center;
@@ -442,7 +442,8 @@ section .title::after {
   margin-bottom: 50px;
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.897), 2px 2px 10px rgba(0, 0, 0, 0.692);
 }
-.about .mission-vision .vision{
+
+.about .mission-vision .vision {
   margin-top: 50px;
 }
 
@@ -486,8 +487,8 @@ section .title::after {
   color: crimson;
   background: none;
 }
-/* @note no need i guess */
 
+/* @note no need i guess */
 
 /* services section styling */
 
@@ -547,7 +548,6 @@ section .title::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.8), 2px 2px 10px rgba(0, 0, 0, 0.2);
-
   transition: color 0.3s ease;
 }
 
@@ -1135,13 +1135,68 @@ footer span a:hover {
   }
 }
 
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ gallery start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#gallery-container {
+  margin-top: 100px;
+}
+
+.gallery-container .title {
+  background: -webkit-linear-gradient(rgb(102, 117, 146), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gallery-container .title::after {
+  content: "our memories";
+  border-radius: 5px;
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gallery-container .content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  z-index: 0;
+}
+
+.gallery-container .content p {
+  width: 80%;
+  text-align: center;
+  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.897), 2px 2px 10px rgba(0, 0, 0, 0.692);
+  color: rgba(0, 0, 0, 0.596);
+  padding: 5px;
+  border: 1px solid rgba(223, 223, 223, 0.507);
+  border-radius: 5px;
+  /* box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.548); */
+  animation: flatten 3s ease-in-out normal;
+  transition: all 800ms;
+}
+
+.gallery-container .content p:hover {
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.979), 8px 8px 20px rgba(0, 0, 0, 0.562);
+}
+
+@keyframes flatten {
+  0% {
+    box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.979), 8px 8px 20px rgba(0, 0, 0, 0.801);
+  }
+  50% {
+    box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.932), 8px 8px 20px rgba(0, 0, 0, 0.548);
+    /* box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.233); */
+  }
+  100% {
+    box-shadow: none;
+  }
+}
 
 .hello {
   opacity: 1 !important;
 }
+
 .full {
   position: fixed;
   left: 0;
@@ -1150,12 +1205,14 @@ footer span a:hover {
   height: 100%;
   z-index: 1;
 }
+
 .full .content {
-  background-color: rgba(0,0,0,0.75) !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
   height: 100%;
   width: 100%;
   display: grid;
 }
+
 .full .content img {
   left: 50%;
   transform: translate3d(0, 0, 0);
@@ -1164,47 +1221,56 @@ footer span a:hover {
   max-height: 100%;
   margin: auto;
 }
+
 .byebye {
   opacity: 0;
 }
+
 .byebye:hover {
   transform: scale(0.2) !important;
 }
-.gallery {
-  margin-top: 200px;
 
+.gallery {
+  /* margin-top: 200px; */
   display: grid;
   grid-column-gap: 8px;
   grid-row-gap: 8px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 8px;
 }
+
 .gallery img {
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 0 16px #333;
   transition: all 1.5s ease;
 }
+
 .gallery img:hover {
   box-shadow: 0 0 32px #333;
 }
+
 .gallery .content {
   padding: 4px;
 }
+
 .gallery .gallery-item {
   transition: grid-row-start 300ms linear;
   transition: transform 300ms ease;
   transition: all 0.5s ease;
   cursor: pointer;
 }
+
 .gallery .gallery-item:hover {
   transform: scale(1.025);
 }
+
 @media (max-width: 600px) {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   }
 }
+
 @media (max-width: 400px) {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
@@ -1293,3 +1359,70 @@ footer span a:hover {
 } */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ gallery end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ loader start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.loader-container {
+  background-color: #242F3F;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 99999;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  top: 50%;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
