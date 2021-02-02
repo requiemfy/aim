@@ -35,18 +35,18 @@ $(document).ready(function () {
       $('.scroll-up-btn').removeClass("show");
     }
 
-    if (this.scrollY > $('#updates').offset().top - 100) {
-      addEffect("night")
-    } else {
-      removeEffect("night")
-    }
+    // if (this.scrollY > $('#updates').offset().top - 100) {
+    //   addEffect("night")
+    // } else {
+    //   removeEffect("night")
+    // }
 
-    if (this.scrollY > $('.contact').offset().top - 100) {
-      addEffect("deep")
+    // if (this.scrollY > $('.contact').offset().top - 100) {
+    //   addEffect("deep")
 
-    } else {
-      removeEffect("deep")
-    }
+    // } else {
+    //   removeEffect("deep")
+    // }
   });
 
   // slide-up script
@@ -83,6 +83,8 @@ $(document).ready(function () {
   };
   gallery.querySelectorAll('img').forEach(function (item) {
     item.classList.add('byebye');
+
+    // for url images
     if (item.complete) {
       console.log(item.src);
     }
@@ -95,14 +97,29 @@ $(document).ready(function () {
         item.classList.remove('byebye');
       });
     }
+  
+    // for local images
+    var altura = getVal(gallery, 'grid-auto-rows');
+    var gap = getVal(gallery, 'grid-row-gap');
+    var gitem = item.parentElement.parentElement;
+    gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+    item.classList.remove('byebye');
   });
   window.addEventListener('resize', resizeAll);
   gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-    item.addEventListener('click', function () {
-      item.classList.toggle('full');
-    });
+    // item.addEventListener('click', function () {
+    //   item.classList.toggle('full');
+    // });
   });
 
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ gallery end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ lightbox start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	$(function(){
+		$('[data-rel="lightbox"]').lightbox();
+	});
+
+
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ lightbox end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 });

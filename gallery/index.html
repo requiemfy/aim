@@ -16,13 +16,18 @@
   <!-- <link href="./css/venobox-custom.css" rel="stylesheet"> -->
   <link href="./style.css" rel="stylesheet">
 
+  <link href="./lib/responsive-lightbox/jquery.lightbox.css" rel="stylesheet">
+
 
   <!-- ******************* js libs ******************* -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- <link href="./lib/lightbox/lightbox.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -430,15 +435,33 @@
 
 
   <div class="gallery" id="gallery">
-    <div class="gallery-item">
-      <div class="content"><img src="https://source.unsplash.com/random/?tech,care" alt=""></div>
-    </div>
-    <div class="gallery-item">
+    <!-- <div class="gallery-item"> -->
+    <!-- <a href="https://source.unsplash.com/random/?tech,care" rel="lightbox" title="my caption"> -->
+    <!-- <a href="https://source.unsplash.com/random/?tech,care" data-rel="lightbox" title="my caption"> -->
+    <a class="gallery-item" href="https://source.unsplash.com/random/?tech,care" data-rel="lightbox" title="my caption">
+      <div class="content">
+        <img src="https://source.unsplash.com/random/?tech,care" alt="">
+      </div>
+    </a>
+    <!-- </a> -->
+    <!-- </a> -->
+    <!-- </div> -->
+
+    <!-- <div class="gallery-item"> -->
+    <a href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox" title="my caption">
+      <!-- <a href="https://source.unsplash.com/random/?tech,studied" rel="lightbox" title="my caption"> -->
+      <!-- <a href="https://source.unsplash.com/random/?tech,studied" data-rel="lightbox" title="my caption"> -->
       <div class="content"><img src="https://source.unsplash.com/random/?tech,studied" alt=""></div>
-    </div>
+      <!-- </a> -->
+      <!-- </a> -->
+    </a>
+    <!-- </div> -->
+
+
     <div class="gallery-item">
       <div class="content"><img src="https://source.unsplash.com/random/?tech,substance" alt=""></div>
     </div>
+
   </div>
 
 
@@ -476,6 +499,13 @@
   <!-- Venobox -->
   <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> -->
   <!-- <script type="text/javascript" src="./lib/venobox/venobox.min.js"></script> -->
+
+  <!-- lightbox -->
+  <!-- <script type="text/javascript" src="./lib/lightbox/lightbox.js"></script> -->
+
+  <!-- responsive-lightbox -->
+  <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+  <script src="./lib/responsive-lightbox/jquery.lightbox.min.js"></script>
 </body>
 
 </html>
