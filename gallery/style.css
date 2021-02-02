@@ -1171,7 +1171,6 @@ footer span a:hover {
   transform: scale(0.2) !important;
 }
 .gallery {
-  border: 2px solid red;
   margin-top: 200px;
 
   display: grid;
