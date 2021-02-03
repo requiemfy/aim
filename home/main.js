@@ -81,7 +81,14 @@ $(document).ready(function () {
 
   // typing text animation script
   var typed = new Typed(".typing", {
-    strings: ["Creative Minds", "Critical Thinkers", "Legendary Creatures", "Phenomenal Individuals"],
+    strings: [
+      "Creative Minds", 
+      "Critical Thinkers", 
+      "Legendary Creatures", 
+      "We Are Electric", 
+      "We don't die", 
+      "We multiply"
+    ],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true

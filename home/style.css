@@ -179,7 +179,6 @@ section .title::after {
 }
 
 .navbar .logo .lvcc-logo {
-
   padding: 1px;
   width: 70px;
   border-radius: 70px;
@@ -354,6 +353,7 @@ section .title::after {
   background-size: 600px;
   background-attachment: fixed;
   pointer-events: none;
+  height: 1000px;
 }
 
 .about .title {
@@ -363,7 +363,7 @@ section .title::after {
 }
 
 .about .title::after {
-  content: "who we are";
+  content: "what we do";
   border-radius: 5px;
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
   background: -webkit-linear-gradient(#eee, #333);
@@ -373,6 +373,7 @@ section .title::after {
 
 .about .about-content .left {
   width: 45%;
+  margin-top: -100px;
 }
 
 .about .about-content .left img {
@@ -404,9 +405,20 @@ section .title::after {
 .about .about-content .right {
   color: rgba(0, 0, 0, 0.596);
   width: 55%;
-  margin-top: -60px;
+  margin-top: 100px;
+  /* margin-top: 400px; */
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.897), 2px 2px 10px rgba(0, 0, 0, 0.692);
   text-align: center;
+  border-radius: 5px;
+  background-image: linear-gradient( to top left, transparent, transparent, transparent, rgba(255, 255, 255, 0.384), rgba(255, 255, 255, 0.123));
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.13);
+  pointer-events: all;
+  transition: all 800ms;
+  padding: 10px;
+}
+
+.about .about-content .right:hover {
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.438), 8px 8px 20px rgba(0, 0, 0, 0.479);
 }
 
 .about .mission-vision {
@@ -415,7 +427,8 @@ section .title::after {
   flex-direction: column;
   align-items: center;
 }
-.about .mission-vision span{
+
+.about .mission-vision span {
   padding: 0px 5px;
   font-size: 20px;
   font-weight: 450;
@@ -425,9 +438,9 @@ section .title::after {
   background: -webkit-linear-gradient(rgba(238, 238, 238, 0.918), #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
-.about .mission-vision p{
+
+.about .mission-vision p {
   color: rgba(0, 0, 0, 0.596);
   width: 500px;
   text-align: center;
@@ -435,7 +448,8 @@ section .title::after {
   margin-bottom: 50px;
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.897), 2px 2px 10px rgba(0, 0, 0, 0.692);
 }
-.about .mission-vision .vision{
+
+.about .mission-vision .vision {
   margin-top: 50px;
 }
 
@@ -455,32 +469,41 @@ section .title::after {
 }
 
 .about .about-content .right p {
-  text-align: justify;
-  background: -webkit-linear-gradient(rgb(107, 106, 106), rgb(1, 2, 51));
+  text-align: center;
+  /* background: -webkit-linear-gradient(rgb(107, 106, 106), rgb(1, 2, 51));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: rgba(51, 51, 51, 0.61);
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.8), 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .about .about-content .right a {
   display: inline-block;
-  background: crimson;
+  /* background-image: linear-gradient(
+    to top left, 
+    transparent, 
+    transparent, 
+    transparent, 
+    transparent, 
+    rgba(255, 255, 255, 0.363),
+    transparent,
+    rgba(255, 255, 255, 0.5)
+    ); */
+
   color: #fff;
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
+  transition: all 800ms;
 }
 
 .about .about-content .right a:hover {
-  color: crimson;
-  background: none;
+  color: rgba(8, 8, 8, 0.562);
 }
-/* @note no need i guess */
 
+/* @note no need i guess */
 
 /* services section styling */
 
@@ -502,7 +525,7 @@ section .title::after {
 }
 
 .services .title::after, .teams .title::after {
-  content: "Our Objectives";
+  content: "aesthetics";
   border-radius: 5px;
   box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
   background: -webkit-linear-gradient(rgba(238, 238, 238, 0.089), #333);
@@ -519,7 +542,7 @@ section .title::after {
   transition: all 800ms ease;
   margin: 10px;
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.842), 2px 2px 10px rgba(0, 0, 0, 0.541);
-  height: 225px;
+  /* height: 225px; */
 }
 
 .services .serv-content .card:hover {
@@ -529,6 +552,34 @@ section .title::after {
 .services .serv-content .card .box {
   transition: all 0.3s ease;
 }
+
+.card .box a {
+  display: inline-block;
+  background-image: linear-gradient(
+    to top left, 
+    transparent, 
+    transparent, 
+    transparent, 
+    transparent, 
+    rgba(255, 255, 255, 0.363),
+    transparent,
+    rgba(255, 255, 255, 0.5)
+    );
+
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  transition: all 800ms;
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.479), 8px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* .card .box a:hover {
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.849);
+} */
 
 .services .serv-content .card:hover .box {
   transform: scale(1.05);
@@ -540,7 +591,6 @@ section .title::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.8), 2px 2px 10px rgba(0, 0, 0, 0.2);
-
   transition: color 0.3s ease;
 }
 
@@ -1127,3 +1177,37 @@ footer span a:hover {
     line-height: 38px;
   }
 }
+
+/* sphere */
+
+.sphere-frame {
+  position: absolute;
+  /* width: 500px;
+  height: 500px; */
+  width: 500px;
+  height: 500px;
+  margin-top: -150px;
+  border: none;
+}
+
+@media (max-width: 958px) {
+  .sphere-frame {
+    margin-top: 0;
+  }
+  .about .about-content .right {
+    margin-top: 400px;
+  }
+  .about {
+    height: 1200px;
+  }
+}
+
+/* .about .right .learn {
+  padding: 10px;
+  background: linear-gradient(to top left, transparent, transparent, transparent, transparent, rgba(255, 255, 255, 0.089), rgba(255, 255, 255, 0.781));
+}
+
+.about .right .learn:hover {
+  background: rgb(215, 215, 215);
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.2);
+} */

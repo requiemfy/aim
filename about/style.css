@@ -388,6 +388,35 @@ section .title::after {
   margin-top: -50px;
 }
 
+.about .img {
+  width: 400px;
+  height: 400px;
+  /* background: url("./images/aim-people.jpg") no-repeat, rgb(215, 215, 215); */
+  background-image: linear-gradient(
+      to top left, 
+      /* circle, */
+      transparent, 
+      transparent, 
+      transparent, 
+      transparent, 
+      rgba(255, 255, 255, 0.164), 
+      rgba(255, 255, 255, 0.658),
+      rgba(255, 255, 255, 0.062)
+    ),
+    /* rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.5)), */
+    url("./images/aim-people.jpg");
+
+  background-size: cover;
+  border-radius: 2px;
+
+  /* box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.541), 8px 8px 20px rgba(0, 0, 0, 0.397); */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.63);
+
+  animation: scaleup 6s ease-in-out infinite;
+  margin-top: -50px;
+}
+
+
 /* @note scale up about us */
 
 @keyframes scaleup {
@@ -408,6 +437,25 @@ section .title::after {
   margin-top: -60px;
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.897), 2px 2px 10px rgba(0, 0, 0, 0.692);
   text-align: center;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to top left, 
+    transparent, 
+    transparent, 
+    transparent, 
+    transparent, 
+    rgba(255, 255, 255, 0.384), 
+    rgba(255, 255, 255, 0.123)
+  );
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.13);
+  pointer-events: all;
+  transition: all 800ms;
+  padding: 5px;
+}
+
+
+.about .about-content .right:hover {
+  box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.438), 8px 8px 20px rgba(0, 0, 0, 0.479);
 }
 
 .about .mission-vision {
@@ -534,6 +582,7 @@ section .title::after {
 
 .services .serv-content .card {
   width: calc(33% - 20px);
+  height: 225px;
   text-align: center;
   border-radius: 6px;
   padding: 20px 25px;
@@ -541,7 +590,7 @@ section .title::after {
   transition: all 800ms ease;
   margin: 10px;
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.842), 2px 2px 10px rgba(0, 0, 0, 0.541);
-  height: 225px;
+  /* background: linear-gradient(to top left, transparent, transparent, transparent, transparent, rgba(255, 255, 255, 0.089), rgba(255, 255, 255, 0.781)); */
 }
 
 .services .serv-content .card:hover {
