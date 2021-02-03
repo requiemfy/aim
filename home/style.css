@@ -21,6 +21,11 @@ body {
   padding: 0;
 }
 
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 /* background particles */
 
 #particles-js {
@@ -353,7 +358,7 @@ section .title::after {
   background-size: 600px;
   background-attachment: fixed;
   pointer-events: none;
-  height: 1000px;
+  height: 800px;
 }
 
 .about .title {
@@ -503,7 +508,16 @@ section .title::after {
   color: rgba(8, 8, 8, 0.562);
 }
 
-/* @note no need i guess */
+
+#passion {
+  border: 2px solid red;
+  width: 100%;
+  height: 500px;
+}
+
+
+
+
 
 /* services section styling */
 
