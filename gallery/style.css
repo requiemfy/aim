@@ -397,7 +397,7 @@ footer span a:hover {
   padding: 5px;
   border: 1px solid rgba(223, 223, 223, 0.507);
   border-radius: 5px;
-  animation: flatten 3s ease-in-out normal;
+  animation: flatten 3.5s ease-in-out normal;
   transition: all 800ms;
 }
 
@@ -407,13 +407,16 @@ footer span a:hover {
 
 @keyframes flatten {
   0% {
-    box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.979), 8px 8px 20px rgba(0, 0, 0, 0.801);
+    box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.979), 8px 8px 20px rgba(0, 0, 0, 0.534);
+    transform: scale(1.01);
   }
   50% {
-    box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.932), 8px 8px 20px rgba(0, 0, 0, 0.548);
+    box-shadow: -8px -8px 20px 0 rgba(255, 255, 255, 0.932), 8px 8px 20px rgba(0, 0, 0, 0.479);
+    transform: scale(1.02);
   }
   100% {
     box-shadow: none;
+    transform: scale(1);
   }
 }
 
