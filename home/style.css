@@ -543,6 +543,18 @@ section .title::after {
   margin: 10px;
   text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.842), 2px 2px 10px rgba(0, 0, 0, 0.541);
   /* height: 225px; */
+
+  background-image: linear-gradient(
+    to top left, 
+    transparent, 
+    transparent, 
+    transparent, 
+    transparent, 
+    rgba(255, 255, 255, 0.363),
+    transparent,
+    rgba(255, 255, 255, 0.5)
+    );
+
 }
 
 .services .serv-content .card:hover {
